@@ -55,8 +55,8 @@ nav ul li a {
 }
 
 .section {
-    padding: 2rem 0; /* Reduce padding for tighter sections */
-    min-height: 80vh; /* Adjust height for more compact sections */
+    padding: 4rem 0; /* Reduce padding for tighter sections */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@ nav ul li a {
     animation: neonGlow 5s infinite alternate;
 }
 
-.project, .hobbies-list, .achievements-list {
+.project {
     background: #111;
     margin: 1rem 0;
     padding: 1rem;
@@ -92,7 +92,7 @@ nav ul li a {
 }
 
 .profile-pic {
-    width: 200px; /* Increase size */
+    width: 150px;
     height: auto; /* Ensure aspect ratio is maintained */
     border-radius: 15px;
     margin-bottom: 1rem;
@@ -110,7 +110,7 @@ nav ul li a {
         width: 90%;
         padding: 1rem;
     }
-    .project, .hobbies-list, .achievements-list {
+    .project {
         margin: 0.5rem 0;
         padding: 0.5rem;
     }
@@ -118,6 +118,6 @@ nav ul li a {
         padding: 3rem 1rem; /* More compact padding for smaller screens */
     }
     .profile-pic {
-        width: 150px; /* Adjust size for smaller screens */
+        width: 100px;
     }
 }
