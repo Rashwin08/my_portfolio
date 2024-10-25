@@ -92,7 +92,7 @@ nav ul li a {
 }
 
 .profile-pic {
-    width: 200px; /* Increase size */
+    width: 300px; /* Increase size */
     height: auto; /* Ensure aspect ratio is maintained */
     border-radius: 15px;
     margin-bottom: 1rem;
@@ -118,6 +118,6 @@ nav ul li a {
         padding: 3rem 1rem; /* More compact padding for smaller screens */
     }
     .profile-pic {
-        width: 150px; /* Adjust size for smaller screens */
+        width: 200px; /* Adjust size for smaller screens */
     }
 }
