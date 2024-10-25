@@ -1,0 +1,124 @@
+/* Basic styles for the portfolio */
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 15px #f0f, 0 0 20px #f0f, 0 0 25px #f0f, 0 0 30px #f0f, 0 0 35px #f0f;
+    }
+    50% {
+        box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff, 0 0 30px #0ff, 0 0 35px #0ff;
+    }
+    100% {
+        box-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 15px #f0f, 0 0 20px #f0f, 0 0 25px #f0f, 0 0 30px #f0f, 0 0 35px #f0f;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff; /* Change text color to white */
+    animation: colorShift 10s infinite alternate;
+}
+
+@keyframes colorShift {
+    0% { background-color: #000; color: #fff; }
+    25% { background-color: #111; color: #f0f; }
+    50% { background-color: #222; color: #0ff; }
+    75% { background-color: #333; color: #ff0; }
+    100% { background-color: #000; color: #fff; }
+}
+
+header {
+    background: #111;
+    color: #fff; /* Change text color to white */
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 5px solid #0ff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: neonGlow 5s infinite alternate;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+nav ul li a {
+    color: #0ff;
+    text-decoration: none;
+}
+
+.section {
+    padding: 6rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+
+.floating-card {
+    background: #111;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff;
+    width: 80%;
+    max-width: 800px;
+    color: #fff; /* Change text color to white */
+    text-align: center;
+    animation: neonGlow 5s infinite alternate;
+}
+
+.project {
+    background: #111;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff;
+    color: #fff; /* Change text color to white */
+    animation: neonGlow 5s infinite alternate;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+    .floating-card {
+        width: 90%;
+        padding: 1rem;
+    }
+    .project {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+    }
+    .section {
+        padding: 3rem 1rem;
+    }
+    .profile-pic {
+        width: 200px;
+        height: 100px;
+    }
+}
