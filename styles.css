@@ -81,7 +81,7 @@ nav ul li a {
     animation: neonGlow 5s infinite alternate;
 }
 
-.project {
+.project, .hobbies-list, .achievements-list {
     background: #111;
     margin: 1rem 0;
     padding: 1rem;
@@ -110,7 +110,7 @@ nav ul li a {
         width: 90%;
         padding: 1rem;
     }
-    .project {
+    .project, .hobbies-list, .achievements-list {
         margin: 0.5rem 0;
         padding: 0.5rem;
     }
