@@ -22,6 +22,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove extra space */
 }
 nav ul li {
     display: inline;
@@ -36,11 +37,14 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 3rem 0; /* Balanced spacing */
+    padding: 3rem 1rem; /* Balanced spacing */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff; /* Uniform background for sections */
+    margin-top: 70px; /* Ensure sections clear the fixed header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .section h1 {
