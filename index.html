@@ -8,10 +8,10 @@
     <script>
         // Smooth page transitions
         document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll(".section");
+            const sections = document.querySelectorAll(".page-container");
             sections.forEach(section => {
                 section.style.opacity = "1"; // Make sections visible on load
-                section.style.transform = "translateY(0)"; // Slide sections into position
+                section.style.transform = "scale(1)"; // Reset scaling effect
             });
         });
     </script>
@@ -29,88 +29,86 @@
             </ul>
         </nav>
     </header>
-    
-    <section id="home" class="section">
-        <div class="floating-card">
-            <h1>Welcome to My Portfolio</h1>
-            <h1>R. Ashwin</h1>
-            <p>Hi, I’m Ashwin, a student passionate about Data Analysis. I'm navigating life with unique experiences, thoughts, and aspirations.</p>
-        </div>
-    </section>
-    
-    <section id="about" class="section">
-        <div class="floating-card">
-            <h1>About Me</h1>
-            <img src="1000071558.jpg" alt="R. Ashwin" class="profile-pic">
-            <p>I'm Ashwin, a dedicated data science and analytics student enthusiastic about transforming data into actionable insights. 
-               Pursuing B.Sc. Computer Science with Data Science and Analytics at Manikam Ramaswamy College of Arts and Science, I aim to become a Data Analyst. 
-               I have completed my schooling at Sathya Vidhyalaya CBSE, and I'm excited about leveraging my skills to make an impact in this field.</p>
-        </div>
-    </section>
-    
-    <section id="skills" class="section">
-        <div class="floating-card">
-            <h1>Skills</h1>
-            <div class="skills">
-                <h3>C Programming</h3>
-            </div>
-            <div class="skills">
-                <h3>Python Programming</h3>
-            </div>
-            <div class="skills">
-                <h3>R Programming</h3>
-            </div>
-           <div class="skills">
-                <h3>Data Visualization</h3>
-            </div>
-            <div class="skills">
-                <h3>PHP Programming</h3>
-            </div>
-        </div>
-    </section>
 
-    <section id="achievements" class="section">
-        <div class="floating-card">
-            <h1>Achievements</h1>
-            <div class="achievements">
-                <h3><a href="recycling-certificate.jpg" target="_blank">Done a Project on Recycling of Polythene</a></h3>
+    <!-- Wrap all sections in a container for transition -->
+    <div class="page-container">
+        <section id="home" class="section">
+            <div class="floating-card">
+                <h1>Welcome to My Portfolio</h1>
+                <h1>R. Ashwin</h1>
+                <p>Hi, I’m Ashwin, a student passionate about Data Analysis. I'm navigating life with unique experiences, thoughts, and aspirations.</p>
             </div>
-            <div class="achievements">
-                <h3><a href="state-handball-certificate.jpg" target="_blank">Participated in State Level Handball Tournament</a></h3>
+        </section>
+        
+        <section id="about" class="section">
+            <div class="floating-card">
+                <h1>About Me</h1>
+                <img src="1000071558.jpg" alt="R. Ashwin" class="profile-pic">
+                <p>I'm Ashwin, a dedicated data science and analytics student enthusiastic about transforming data into actionable insights...</p>
             </div>
-            <div class="achievements">
-                <h3><a href="university-badminton-certificate.jpg" target="_blank">Attended University Badminton Selection Trials</a></h3>
-            </div>
-            <div class="achievements">
-                <h3><a href="guvi-course-certificate.jpg" target="_blank">Completed Courses in Guvi Geek, Infosys</a></h3>
-            </div>
-            <div class="achievements">
-                <h3><a href="social-internship-certificate.jpg" target="_blank">Done Social Internship for the Government of Tamil Nadu</a></h3>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="hobbies" class="section">
-        <div class="floating-card">
-            <h1>Hobbies</h1>
-            <div class="hobbies">
-                <h3>Listening to Music</h3>
+        <section id="skills" class="section">
+            <div class="floating-card">
+                <h1>Skills</h1>
+                <div class="skills">
+                    <h3>C Programming</h3>
+                </div>
+                <div class="skills">
+                    <h3>Python Programming</h3>
+                </div>
+                <div class="skills">
+                    <h3>R Programming</h3>
+                </div>
+               <div class="skills">
+                    <h3>Data Visualization</h3>
+                </div>
             </div>
-            <div class="hobbies">
-                <h3>Riding Bikes and Cars</h3>
-            </div>
-            <div class="hobbies">
-                <h3>Cooking</h3>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="floating-card">
-            <h1>Contact Me</h1>
-            <p>Email: rashwin081105@gmail.com</p>
-            <p>Phone: 88388-04174</p>
-        </div>
-    </section>
+        <section id="achievements" class="section">
+            <div class="floating-card">
+                <h1>Achievements</h1>
+                <div class="achievements">
+                    <h3><a href="recycling-certificate.jpg" target="_blank">Done a Project on Recycling of Polythene</a></h3>
+                </div>
+                <div class="achievements">
+                    <h3><a href="state-handball-certificate.jpg" target="_blank">Participated in State Level Handball Tournament</a></h3>
+                </div>
+                <div class="achievements">
+                    <h3><a href="university-badminton-certificate.jpg" target="_blank">Attended University Badminton Selection Trials</a></h3>
+                </div>
+                <div class="achievements">
+                    <h3><a href="guvi-course-certificate.jpg" target="_blank">Completed Courses in Guvi Geek, Infosys</a></h3>
+                </div>
+                <div class="achievements">
+                    <h3><a href="social-internship-certificate.jpg" target="_blank">Done Social Internship for the Government of Tamil Nadu</a></h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="section">
+            <div class="floating-card">
+                <h1>Hobbies</h1>
+                <div class="hobbies">
+                    <h3>Listening to Music</h3>
+                </div>
+                <div class="hobbies">
+                    <h3>Riding Bikes and Cars</h3>
+                </div>
+                <div class="hobbies">
+                    <h3>Cooking</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="floating-card">
+                <h1>Contact Me</h1>
+                <p>Email: rashwin081105@gmail.com</p>
+                <p>Phone: 88388-04174</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
