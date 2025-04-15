@@ -3,93 +3,77 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Light background for contrast */
-    color: #333; /* Dark text for readability */
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for color changes */
 }
 
-/* Header styling */
 header {
-    background-color: #fff; /* White background */
-    color: #333; /* Dark text for contrast */
+    background-color: #fff;
+    color: #333;
     padding: 1rem 0;
     text-align: center;
-    border-bottom: 2px solid #ddd; /* Subtle divider */
+    border-bottom: 2px solid #ddd;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; /* Remove extra space */
-}
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-nav ul li a {
-    color: #0073e6; /* Professional blue for links */
+/* Transition Effects */
+a {
     text-decoration: none;
+    color: #0073e6;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Link hover effect */
 }
-nav ul li a:hover {
-    text-decoration: underline; /* Add hover effect */
+a:hover {
+    color: #005bb5; /* Slightly darker blue on hover */
+    text-decoration: underline; /* Add underline */
 }
 
-/* Section styling for floating effect */
 .section {
-    padding: 3rem 1rem; /* Balanced spacing */
+    padding: 3rem 1rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 70px; /* Avoid overlap with fixed header */
+    margin-top: 70px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slide up effect */
+    animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
+}
+
+/* Fade-in and Slide Transition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .floating-card {
-    background: #fff; /* White background for contrast */
+    background: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Strong shadow for floating effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 800px;
-    color: #333; /* Dark text for readability */
+    color: #333;
     text-align: center;
-    transform: translateY(-10px); /* Lift the card slightly */
+    transform: scale(0.95); /* Shrink effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .floating-card:hover {
-    transform: translateY(-20px); /* Hover effect: make it "float" more */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: scale(1); /* Grow effect on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.project, .hobbies-list, .achievements-list {
-    background: #fff; /* White background */
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
-    color: #333; /* Dark text */
-    transform: translateY(-5px); /* Slight floating effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-}
-
-.project:hover, .hobbies-list:hover, .achievements-list:hover {
-    transform: translateY(-10px); /* Enhanced hover effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-}
-
-.profile-pic {
-    width: 150px;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Subtle floating shadow */
-}
-
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     nav ul li {
         display: block;
@@ -97,13 +81,10 @@ nav ul li a:hover {
         margin: 0.5rem 0;
     }
     .floating-card {
-        width: 95%; /* Adjust width for smaller screens */
+        width: 95%;
         padding: 1.5rem;
     }
     .section {
-        padding: 2rem 1rem; /* Compact spacing */
-    }
-    .profile-pic {
-        width: 120px; /* Adjust size for smaller screens */
+        padding: 2rem 1rem;
     }
 }
