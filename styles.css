@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for color changes */
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
@@ -20,15 +20,26 @@ header {
     z-index: 1000;
 }
 
-/* Transition Effects */
-a {
-    text-decoration: none;
-    color: #0073e6;
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Link hover effect */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-a:hover {
-    color: #005bb5; /* Slightly darker blue on hover */
-    text-decoration: underline; /* Add underline */
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #005bb5;
+    text-decoration: underline;
 }
 
 .section {
@@ -38,12 +49,11 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 70px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Slide up effect */
-    animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in forwards;
 }
 
-/* Fade-in and Slide Transition */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -64,16 +74,23 @@ a:hover {
     max-width: 800px;
     color: #333;
     text-align: center;
-    transform: scale(0.95); /* Shrink effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    transform: scale(0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .floating-card:hover {
-    transform: scale(1); /* Grow effect on hover */
+    transform: scale(1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Adjustments */
+.profile-pic {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
 @media screen and (max-width: 768px) {
     nav ul li {
         display: block;
@@ -86,5 +103,8 @@ a:hover {
     }
     .section {
         padding: 2rem 1rem;
+    }
+    .profile-pic {
+        width: 120px;
     }
 }
