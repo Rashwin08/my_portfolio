@@ -49,19 +49,24 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 70px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease-in forwards;
 }
 
-@keyframes fadeIn {
+/* Transition Effects */
+.page-container {
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.95); /* Slight scaling effect */
+    animation: pageEnter 0.5s ease forwards; /* Smooth transition for entering pages */
+}
+
+/* Page Enter Animation */
+@keyframes pageEnter {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: scale(0.95);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
